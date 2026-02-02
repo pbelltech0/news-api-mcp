@@ -35,11 +35,10 @@ class NewsAPI:
         if sources:
             params["sources"] = sources
         if page_size:
-            # Note: News API uses 'pageSize' (camelCase)
             params["pageSize"] = page_size
         if page:
             params["page"] = page
-        params["apiKey"] = API_KEY  # Assuming API_KEY is defined elsewhere
+        params["apiKey"] = API_KEY
 
         # TODO: add try/except logic
         query_string = parse.urlencode(params)
@@ -67,7 +66,6 @@ class NewsAPI:
         if query:
             params["q"] = query
         if search_in:
-            # Note: News API uses 'pageSize' (camelCase)
             params["searchIn"] = search_in
         if sources:
             params["sources"] = sources
@@ -87,7 +85,7 @@ class NewsAPI:
             params["pageSize"] = pageSize
         if page:
             params["page"] = page
-        params["apiKey"] = API_KEY  # Assuming API_KEY is defined elsewhere
+        params["apiKey"] = API_KEY
 
         # TODO: add try/except logic
         query_string = parse.urlencode(params)
